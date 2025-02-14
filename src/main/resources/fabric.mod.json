@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "jeb",
   "version": "${version}",
 
   "name": "Just Enough Blocks",
-  "description": "This mod aims to have blocks , duh",
+  "description": "This mod aims to add blocks, duh",
   "authors": [
     "Deive The Dev"
   ],
