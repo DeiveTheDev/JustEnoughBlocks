@@ -8,7 +8,7 @@ import turniplabs.halplibe.util.GameStartEntrypoint;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 
 
-public class JEBMain implements ModInitializer, RecipeEntrypoint, GameStartEntrypoint {
+public class JEBMain implements ModInitializer, GameStartEntrypoint {
     public static final String MOD_ID = "jeb";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
@@ -17,16 +17,6 @@ public class JEBMain implements ModInitializer, RecipeEntrypoint, GameStartEntry
 		JEBBlocks.initBlocks();
         LOGGER.info("JEB initialized.");
     }
-
-	@Override
-	public void onRecipesReady() {
-
-	}
-
-	@Override
-	public void initNamespaces() {
-
-	}
 
 	@Override
 	public void beforeGameStart() {

@@ -28,7 +28,7 @@
 			"deivethedev.jeb.JEBMain"
 		],
 		"recipesReady": [
-			"deivethedev.jeb.JEBMain"
+			"deivethedev.jeb.JEBRecipes"
 		],
 		"initModels": [
 			"deivethedev.jeb.JEBModels"

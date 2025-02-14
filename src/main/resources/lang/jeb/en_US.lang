@@ -4,4 +4,7 @@ tile.jeb.cobble.granite.mossy.name = Mossy Cobbled Granite
 tile.jeb.cobble.granite.mossy.desc = Obtained through breaking with piston Mossy Granite
 tile.jeb.cobble.limestone.mossy.name = Mossy Cobbled Limestone
 tile.jeb.cobble.limestone.mossy.desc = Obtained through breaking with piston Mossy Limestone
-
+tile.jeb.slate.carved.name = Carved Slate
+tile.jeb.slate.carved.desc = Carved Slate
+tile.jeb.slab.slate.carved.name = Polished Slate Slab
+tile.jeb.slab.slate.carved.desc = Polished Slate Slab
