@@ -3,10 +3,10 @@
   "id": "examplemod",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "Just Enough Blocks",
+  "description": "This mod aims to have blocks , duhr",
   "authors": [
-    "Turnip Labs"
+    "Deive The Dev"
   ],
   "contact": {
     "homepage": "",
@@ -19,20 +19,23 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-			"turniplabs.examplemod.ExampleMod"
+			"deivethedev.jeb.JEBMain"
     ],
 		"beforeGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+			"deivethedev.jeb.JEBMain"
 		],
 		"afterGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+			"deivethedev.jeb.JEBMain"
 		],
 		"recipesReady": [
-			"turniplabs.examplemod.ExampleMod"
+			"deivethedev.jeb.JEBMain"
+		],
+		"initModels": [
+			"deivethedev.jeb.JEBModels"
 		]
 	},
   "mixins": [
-      "examplemod.mixins.json"
+      "jeb.mixins.json"
   ],
 
   "depends": {

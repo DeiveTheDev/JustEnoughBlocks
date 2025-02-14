@@ -1,4 +1,4 @@
-package turniplabs.examplemod;
+package deivethedev.jeb;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -8,12 +8,14 @@ import turniplabs.halplibe.util.GameStartEntrypoint;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 
 
-public class ExampleMod implements ModInitializer, RecipeEntrypoint, GameStartEntrypoint {
-    public static final String MOD_ID = "examplemod";
+public class JEBMain implements ModInitializer, RecipeEntrypoint, GameStartEntrypoint {
+    public static final String MOD_ID = "jeb";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
     @Override
     public void onInitialize() {
-        LOGGER.info("ExampleMod initialized.");
+		JEBBlocks.initBlocks();
+        LOGGER.info("JEB initialized.");
     }
 
 	@Override
