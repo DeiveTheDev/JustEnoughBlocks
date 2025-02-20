@@ -15,6 +15,7 @@ public class JEBMain implements ModInitializer, GameStartEntrypoint {
     @Override
     public void onInitialize() {
 		JEBBlocks.initBlocks();
+		JEBItems.initItems();
         LOGGER.info("JEB initialized.");
     }
 
