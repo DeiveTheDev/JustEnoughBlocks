@@ -1,9 +1,6 @@
 package deivethedev.jeb;
 
-import deivethedev.jeb.blocks.BlockLogicGlassDoorPainted;
-import deivethedev.jeb.blocks.BlockLogicGlassPainted;
-import deivethedev.jeb.blocks.BlockLogicGlassTrapdoorPainted;
-import deivethedev.jeb.blocks.BlockLogicCarpet;
+import deivethedev.jeb.blocks.*;
 import net.minecraft.core.block.*;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.tag.BlockTags;
@@ -30,7 +27,7 @@ public class JEBBlocks {
 
 	public static Block<BlockLogicSlab> slabWool;
 	public static Block<BlockLogicStairs> stairWool;
-	public static Block<?> carpet;
+	public static Block<BlockLogicCustomLayerBase> carpet;
 
 	public static Block<?> glassPainted;
 	public static Block<BlockLogicDoor> glassDoorPaintedTop;
@@ -70,6 +67,9 @@ public class JEBBlocks {
 			.setLightOpacity(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.EXTENDS_MOTION_SENSOR_RANGE, BlockTags.NOT_IN_CREATIVE_MENU);
 
+		BlockBuilder carpetBuilder = woolBuilder.clone();
+		carpetBuilder.setTags(BlockTags.BROKEN_BY_FLUIDS, BlockTags.MINEABLE_BY_SHEARS, BlockTags.OVERRIDE_STEPSOUND);
+
 		BlockBuilder glassPropsBuilder = new BlockBuilder(MOD_ID)
 			.setBlockSound(BlockSounds.GLASS)
 			.setHardness(0.3F)
@@ -92,7 +92,7 @@ public class JEBBlocks {
 
 		stairWool = woolBuilder.build("stairs.wool", "stairs_wool", nextID(), b -> new BlockLogicStairsPainted(b, Blocks.WOOL));
 
-		carpet = woolBuilder.build("carpet", "carpet", nextID(), b -> new BlockLogicCarpet(b, Material.cloth));
+		carpet = woolBuilder.build("carpet", "carpet", nextID(), b -> new BlockLogicCarpet(b, 0.0625, null, Material.cloth));
 
 		glassPainted = glassBuilder.build("glass.painted", "glass_painted", nextID(), b -> new BlockLogicGlassPainted(b, Material.glass));
 

@@ -1,11 +1,9 @@
 package deivethedev.jeb;
 
 import net.minecraft.core.item.Item;
-import net.minecraft.core.item.ItemArmor;
 import net.minecraft.core.item.ItemDoorPainted;
 import net.minecraft.core.item.material.ArmorMaterial;
 import net.minecraft.core.item.tag.ItemTags;
-import turniplabs.halplibe.helper.ArmorHelper;
 import turniplabs.halplibe.helper.ItemBuilder;
 import static deivethedev.jeb.JEBBlocks.*;
 

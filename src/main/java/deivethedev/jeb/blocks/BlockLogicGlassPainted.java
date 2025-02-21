@@ -2,12 +2,12 @@
 
 package deivethedev.jeb.blocks;
 
-import net.minecraft.client.render.block.model.BlockModelWool;
-import net.minecraft.client.render.texture.stitcher.IconCoordinate;
-import net.minecraft.client.render.texture.stitcher.TextureRegistry;
+import deivethedev.jeb.JEBBlocks;
 import net.minecraft.core.block.*;
+import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.entity.player.Player;
+import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.util.helper.DyeColor;
 import net.minecraft.core.util.helper.Side;
@@ -18,6 +18,16 @@ public class BlockLogicGlassPainted extends BlockLogicGlass implements IPainted 
 
 	public BlockLogicGlassPainted(Block<?> block, Material material) {
 		super(block, material);
+	}
+
+	public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int meta, TileEntity tileEntity) {
+		switch (dropCause) {
+			case PICK_BLOCK:
+			case SILK_TOUCH:
+				return new ItemStack[]{new ItemStack(JEBBlocks.glassPainted, 1, meta)};
+			default:
+				return null;
+		}
 	}
 
 	public int getPlacedBlockMetadata(@Nullable Player player, ItemStack stack, World world, int x, int y, int z, Side side, double xPlaced, double yPlaced) {

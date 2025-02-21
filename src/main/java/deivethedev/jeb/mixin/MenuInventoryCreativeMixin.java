@@ -3,11 +3,8 @@ package deivethedev.jeb.mixin;
 import deivethedev.jeb.JEBBlocks;
 import deivethedev.jeb.JEBItems;
 import net.minecraft.core.block.Blocks;
-import net.minecraft.core.block.tag.BlockTags;
-import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.Items;
-import net.minecraft.core.item.tag.ItemTags;
 import net.minecraft.core.player.inventory.container.ContainerInventory;
 import net.minecraft.core.player.inventory.menu.MenuInventory;
 import net.minecraft.core.player.inventory.menu.MenuInventoryCreative;
@@ -18,7 +15,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 import static net.minecraft.core.player.inventory.menu.MenuInventoryCreative.creativeItems;

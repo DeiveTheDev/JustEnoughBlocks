@@ -4,6 +4,7 @@
   "package": "deivethedev.jeb.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "BlockLogicGlassMixin",
     "BlockLogicStairsPaintedMixin",
     "MenuInventoryCreativeMixin",
     "MossMixin"

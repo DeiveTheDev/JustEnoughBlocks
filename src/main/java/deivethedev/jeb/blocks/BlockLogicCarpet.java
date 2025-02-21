@@ -1,8 +1,11 @@
 package deivethedev.jeb.blocks;
 
 import net.minecraft.core.block.*;
+import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.entity.player.Player;
+import net.minecraft.core.enums.EnumDropCause;
+import net.minecraft.core.item.IItemConvertible;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.util.helper.DyeColor;
 import net.minecraft.core.util.helper.Side;
@@ -10,10 +13,10 @@ import net.minecraft.core.world.World;
 import org.jetbrains.annotations.Nullable;
 
 
-public class BlockLogicCarpet extends BlockLogic implements IPainted {
+public class BlockLogicCarpet extends BlockLogicCustomLayerBase implements IPainted {
 
-	public BlockLogicCarpet(Block<?> block, Material material) {
-		super(block, material);
+	public BlockLogicCarpet(Block<BlockLogicCustomLayerBase> block, double height, Block<?> fullBlock, Material material) {
+		super(block, height, fullBlock, material);
 		this.setBlockBounds((double)(0.0F), (double)0.0F, (double)(0.0F), (double)(1.0F), (double)0.0625F, (double)(1.0F ));
 	}
 
@@ -21,12 +24,17 @@ public class BlockLogicCarpet extends BlockLogic implements IPainted {
 		return stack.getMetadata();
 	}
 
-	public boolean isSolidRender() {
-		return false;
-	}
-
-	public boolean isCubeShaped() {
-		return false;
+	public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int meta, TileEntity tileEntity) {
+		switch (dropCause) {
+			case SILK_TOUCH:
+			case EXPLOSION:
+			case PROPER_TOOL:
+				return new ItemStack[]{new ItemStack((IItemConvertible) this, meta % 16 + 1, meta - meta % 16)};
+			case PICK_BLOCK:
+				return new ItemStack[]{new ItemStack((IItemConvertible) this, 1, meta - meta % 16)};
+			default:
+				return null;
+		}
 	}
 
 	public DyeColor fromMetadata(int meta) {

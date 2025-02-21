@@ -1,17 +1,17 @@
 package deivethedev.jeb.blocks;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.render.block.model.BlockModelDoorPainted;
-import net.minecraft.client.render.block.model.BlockModelTrapDoorPainted;
 import net.minecraft.client.render.texture.stitcher.IconCoordinate;
 import net.minecraft.client.render.texture.stitcher.TextureRegistry;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockLogicDoor;
-import net.minecraft.core.block.BlockLogicTrapDoor;
 import net.minecraft.core.util.helper.Axis;
 import net.minecraft.core.util.helper.DyeColor;
 import net.minecraft.core.util.helper.Side;
-import net.minecraft.core.util.helper.Sides;
 
+@Environment(EnvType.CLIENT)
 public class BlockModelGlassDoorPainted<T extends BlockLogicDoor> extends BlockModelDoorPainted<T> {
 	public static final IconCoordinate[] doorBottomTextures = new IconCoordinate[16];
 	public static final IconCoordinate[] doorTopTextures = new IconCoordinate[16];

@@ -6,9 +6,7 @@ import net.minecraft.client.render.block.model.BlockModelSlabPainted;
 import net.minecraft.client.render.block.model.BlockModelWool;
 import net.minecraft.client.render.texture.stitcher.IconCoordinate;
 import net.minecraft.core.block.*;
-import net.minecraft.core.util.helper.DyeColor;
 import net.minecraft.core.util.helper.Side;
-import net.minecraft.core.world.World;
 
 @Environment(EnvType.CLIENT)
 public class BlockModelSlabWool<T extends BlockLogicSlab> extends BlockModelSlabPainted<T> {

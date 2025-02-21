@@ -15,7 +15,6 @@ import org.lwjgl.opengl.GL11;
 
 @Environment(EnvType.CLIENT)
 public class BlockModelCarpet<T extends BlockLogic> extends BlockModelWool<T> {
-	public static final IconCoordinate[] texCoords = new IconCoordinate[16];
 
 	public BlockModelCarpet(Block<T> block) {
 		super(block);
